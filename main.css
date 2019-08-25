@@ -9,7 +9,7 @@ body {
 
 #product-overview {
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url('images/freedom.jpg') 100% 25% / cover no-repeat border-box, #ff1b68;
+    url('images/freedom.jpg') center / cover no-repeat border-box, #ff1b68;
   /* background-image: url('freedom.jpg');
   background-size: cover;
   background-position: 100% 20%;
@@ -36,28 +36,31 @@ body {
   position: absolute;
   bottom: 5%;
   left: 3%;
+  font-size: 1.6rem;
 }
 
-.plan__list {
-  width: 80%;
-  margin: auto;
-  text-align: center;
+@media (min-width: 40rem) {
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
 }
 
 .plan {
   background-color: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  width: 100%;
 }
 
 .plan--highlighted {
   background: #19b84c;
   color: #fff;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .plan--highlighted .plan__price {
@@ -94,6 +97,25 @@ body {
   margin: 0.5rem 0;
 }
 
+@media (min-width: 40rem) {
+  .plan__list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
 #key-features {
   background: #ff1b68;
   margin-top: 5rem;
@@ -113,9 +135,8 @@ body {
 }
 
 .key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  /* display: inline-block; */
+  /* width: 30%; */
 }
 
 .key-feature__image {
@@ -133,6 +154,15 @@ body {
   font-weight: bold;
   color: white;
   font-size: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
+  }
 }
 
 /* h1 {
